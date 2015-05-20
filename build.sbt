@@ -1,6 +1,6 @@
 import play.twirl.sbt.Import._
 
-name := "prismicio-starter"
+name := "poc-fft-billetterie"
 
 version := "1.1"
 
