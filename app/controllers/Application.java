@@ -19,6 +19,12 @@ public class Application extends Controller {
     return ok(views.html.index.render(someDocuments));
   }
 
+  // -- Home page
+  @Prismic.Action
+  public static Result store() {
+    return ok(views.html.store.render());
+  }
+
   // -- Document detail
   @Prismic.Action
   public static Result detail(String id, String slug) {
