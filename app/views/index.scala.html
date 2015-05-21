@@ -2,29 +2,35 @@
 
 @main("All documents") {
 
-    <form action="@routes.Application.search(null)" method="GET">
-      <input type="text" name="q" value="">
-      <input type="submit" value="Search">
-    </form>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <form action="@routes.Application.search(null)" method="GET">
+                <input type="text" name="q" value="">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
 
-    <hr>
 
-    <h2>
-      @someDocuments.size() match {
-        case 0 => { No documents found }
-        case 1 => { One document found }
-        case n => { @n documents found }
-      }
-    </h2>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <h2>
+            @someDocuments.size() match {
+                case 0 => { No documents found }
+                case 1 => { One document found }
+                case n => { @n documents found }
+            }
+            </h2>
 
-    <ul>
-      @for(document <- someDocuments) {
-        <li>
-          <a href="@routes.Application.detail(document.getId(), document.getSlug())">
-            @document.getSlug()
-          </a>
-        </li>
-      }
-    </ul>
+            <ul>
+            @for(document <- someDocuments) {
+                <li>
+                    <a href="@routes.Application.detail(document.getId(), document.getSlug())">
+                    @document.getSlug()
+                    </a>
+                </li>
+            }
+            </ul>        </div>
+    </div>
 
 }

@@ -5,19 +5,62 @@
 <html>
     <head>
         <title>@title</title>
+            <!-- Bootstrap CSS (CDN) -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
-        <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+        <link rel="shortcut icon" href="@routes.Assets.at("images/favicon.ico")">
         <script src="@routes.Assets.at("javascripts/jquery-1.9.0.min.js")" type="text/javascript"></script>
     </head>
+
     <body>
+        <div id="app-wrapper">
+            <header id="app-header" class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <a id="header-brand" href="@routes.Application.index()">
+                        <img id="header-logo" src="@routes.Assets.at("images/logo-fft.png")" alt="Logo Roland Garros">
+                        <div id="header-info">
+                            <p id="header-rg-name">Roland-Garros 2015</p>
+                            <p id="header-rg-date">Site Billetterie de Roland-Garros 19 MAI - 7 JUIN 2015</p>
+                        </div>
+                    </a>
+                </div>
+            </header>
 
-        <header>
-          <a href="@routes.Application.index()">
-            <h1>Your prismic.io project</h1>
-          </a>
-        </header>
+            <div id="app-body">
+                <div class="container">
+                    @content
+                </div>
+            </div>
 
-        @content
-
+            <footer id="app-footer">
+                <div class="container">
+                    <div class="row">
+                        <section class="col-md-4">
+                            <div id="footer-logo"><img src="@routes.Assets.at("images/rg-logo-footer.png")" alt="Logo footer"></div>
+                            <div id="footer-logo-description">
+                                <p>© Copyright 2015</p>
+                                <p><a href="http://fft.fr" target="blank">Fédération Française de Tennis</a></p>
+                                <p><a href="http://www-05.ibm.com/innovation/fr/rolandgarros/index.html" target="blank">Technologie à Roland-Garros</a></p>
+                            </div>
+                        </section>
+                        <section class="col-md-4">
+                            <div id="footer-blabla"><img src="@routes.Assets.at("images/blabla-logo-footer.jpg")" alt="Logo footer Blabla"></div>
+                            <div id="footer-blabla-description">
+                                <p><a href="#">La Fédération Française de Tennis a fait le choix de maintenir le tournoi de Roland-Garros à Paris, sur son site historique. Ce projet ambitieux préservera la personnalité inimitable de Roland-Garros.</a></p>
+                            </div>
+                        </section>
+                        <section class="col-md-4">
+                            <p>ACCES RAPIDE</p>
+                            <p><a href="#">Mentions Légales</a></p>
+                            <p><a href="#">Conditions Générales de Vente</a></p>
+                            <p><a href="#">Règlement Intérieur</a></p>
+                            <p><a href="#">Plan du Site</a></p>
+                        </section>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- Bootstrap JS (CDN) -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
     </body>
 </html>

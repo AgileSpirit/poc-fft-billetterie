@@ -1,0 +1,111 @@
+/* ------- */
+/* PALETTE */
+/* ------- */
+
+.palette {
+    color: #00503C; /* Vert foncé   -> officiel */
+    color: #80A89E; /* Vert clair   -> pour les typos affichées sur fond vert foncé */
+    color: #EFEFEF; /* Gris clair   -> pour le background */
+    color: #EBEBEB; /* Gris clair   -> variante pour le background */
+    color: #EF7F44; /* Orange       -> pour les boutons et actions */
+    color: #555;    /* Gris foncé   -> pour les typos normales */
+    color: #AFAFAF; /* Gris clair   -> pour les typos visant à mettre en avant une image commerciale */
+}
+
+/* ------ */
+/* GLOBAL */
+/* ------ */
+a {
+    text-decoration: underline;
+    color: inherit!important;
+}
+
+/* ------------------ */
+/* BOOTSTRAP OVERRIDE */
+/* ------------------ */
+
+.panel {
+    border-radius: 0;
+}
+
+/**/
+
+#app-wrapper {}
+
+#app-header {
+    background-color: #FFF;
+    height: 90px;
+    margin-bottom: 0;
+    border-bottom: 10px solid #00503C;
+}
+
+#app-body {
+    margin-top: 90px;
+    background-color: #EFEFEF;
+    padding: 20px 0;
+}
+
+#app-footer {
+    background-color: #00503C;
+    color: #80A89E;
+    font-size: 12px;
+}
+
+/**/
+
+#header-brand {
+    text-decoration: none;
+}
+#header-logo {
+    float: left;
+    height: 70px;
+    padding-top: 10px;
+}
+#header-info {
+    float: left;
+    text-align: center;
+    margin: 14px 0 0 10px;
+}
+#header-rg-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+#header-rg-date {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+}
+
+#app-footer section {
+    border-left: 1px solid #0d5946;
+    min-height: 180px;
+    padding-top: 20px;
+}
+#app-footer p {
+    margin: 0;
+    padding: 0;
+}
+#app-footer section:first-child {
+    border-left:none;
+}
+#footer-logo {
+    float: left;
+}
+#footer-logo-description {
+    float: left;
+    width: 62%;
+    padding-left: 10px;
+}
+#footer-blabla {
+    float: left;
+
+}
+#footer-blabla-description {
+    float: left;
+    width: 62%;
+    padding-left: 10px;
+}

@@ -2,8 +2,13 @@
 
 @main(s"Document detail ${document.getSlug()}") {
 
-    <article id="@document.getId()">
-      @Html(document.asHtml(prismic.getLinkResolver()))
-    </article>
+    <div class="panel panel-default">
+        <div class="panel-body">
+            <article id="@document.getId()">
+                @Html(document.asHtml(prismic.getLinkResolver()))
+            </article>
+        </div>
+    </div>
+
 
 }
