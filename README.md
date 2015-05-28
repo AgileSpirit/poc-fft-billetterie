@@ -1,4 +1,46 @@
-## Starter for Play with Java projects
+## POC FFT Refonte du Front-Office de Billetterie [![Build Status](https://travis-ci.org/AgileSpirit/poc-fft-billetterie.svg?branch=master)](https://travis-ci.org/AgileSpirit/poc-fft-billetterie) 
+
+### Installation de la station de développement
+
+1/ Installer le JDK 8
+
+2/ Installer Typesafe Activator
+
+```
+$ brew install typesafe-activator
+```
+
+3/ Récupérer le code source
+
+```
+$ cd ~/Works
+$ git clone git@github.com:AgileSpirit/poc-fft-billetterie.git
+```
+
+4/ Lancer l'application
+
+```
+$ cd ~/Works/poc-fft-billetterie
+$ activator run
+```
+
+5/ Prendre un café & faire une partie de baby-foot
+
+6/ Vérifier que l'application tourne
+
+Dans un navigateur, accéder à l'URL http://localhost:9000
+
+7/ Installer le plugin Scala pour Intellij IDEA
+
+
+### Déployer sur Heroku
+
+TODO
+
+---
+
+
+## Starter for Play with Java projects 
 
 This is a blank [Play framework](http://www.playframework.com) project that will connect to any [prismic.io](https://prismic.io) repository. It uses the prismic.io Java developement kit, and provide a few helpers to integrate with the Play framework.
 
