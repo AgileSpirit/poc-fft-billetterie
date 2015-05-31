@@ -4,7 +4,7 @@ import java.util.List;
 
 public class ShoppingCart {
 
-    Long id;
-    List<Product> products;
+    private Long id;
+    private List<Product> products;
 
 }
