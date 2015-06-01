@@ -1,6 +1,10 @@
 package controllers;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.slf4j.Logger;
 import play.*;
+import play.libs.Json;
 import play.mvc.*;
 
 import java.util.*;
@@ -9,9 +13,25 @@ import views.html.*;
 
 import io.prismic.*;
 import static controllers.Prismic.*;
+import static org.slf4j.LoggerFactory.getLogger;
 
 public class Application extends Controller {
-  
+
+  @BodyParser.Of(BodyParser.Json.class)
+  public static Result postPatate() {
+    JsonNode json = request().body().asJson();
+    String name = json.findPath("name").textValue();
+    if(name == null) {
+      return badRequest("Missing parameter [name]");
+    } else {
+      ObjectNode result = Json.newObject();
+      result.put("exampleField1", "foobar");
+      result.put("exampleField2", "Hello world!");
+      return ok(result);
+    }
+  }
+
+
   // -- Home page
   @Prismic.Action
   public static Result index() {
@@ -56,7 +76,7 @@ public class Application extends Controller {
   // -- Resolve links to documents
   public static LinkResolver linkResolver(Api api, Http.Request request) {
     return new LinkResolver(api, request);
-  } 
+  }
 
   public static class LinkResolver extends SimpleLinkResolver {
     final Api api;
