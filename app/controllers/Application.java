@@ -18,7 +18,7 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class Application extends Controller {
 
   @BodyParser.Of(BodyParser.Json.class)
-  public static Result postPatate() {
+  public static Result createPatate() {
     JsonNode json = request().body().asJson();
     String name = json.findPath("name").textValue();
     if(name == null) {
