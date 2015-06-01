@@ -1,5 +1,7 @@
 ## POC FFT Refonte du Front-Office de Billetterie [![Build Status](https://travis-ci.org/AgileSpirit/poc-fft-billetterie.svg?branch=master)](https://travis-ci.org/AgileSpirit/poc-fft-billetterie) 
 
+[![Join the chat at https://gitter.im/AgileSpirit/poc-fft-billetterie](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/AgileSpirit/poc-fft-billetterie?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 ### Installation de la station de développement
 
 1/ Installer le JDK 8
