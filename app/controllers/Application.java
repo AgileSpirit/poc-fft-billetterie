@@ -2,6 +2,9 @@ package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import com.oracle.jrockit.jfr.Producer;
+import domain.Cart;
+import domain.Product;
 import org.slf4j.Logger;
 import play.*;
 import play.libs.Json;
@@ -9,6 +12,7 @@ import play.mvc.*;
 
 import java.util.*;
 
+import services.CartService;
 import views.html.*;
 
 import io.prismic.*;
@@ -18,16 +22,27 @@ import static org.slf4j.LoggerFactory.getLogger;
 public class Application extends Controller {
 
   @BodyParser.Of(BodyParser.Json.class)
-  public static Result createPatate() {
+  public static Result addProductToCart(Integer cartNumber) {
     JsonNode json = request().body().asJson();
-    String name = json.findPath("name").textValue();
-    if(name == null) {
-      return badRequest("Missing parameter [name]");
+    if(!json.has("name") || !json.has("quantity")) {
+      return badRequest("Missing parameter name and/or quantity.");
     } else {
-      ObjectNode result = Json.newObject();
-      result.put("exampleField1", "foobar");
-      result.put("exampleField2", "Hello world!");
-      return ok(result);
+      Product specifiedProduct = new Product(json.findPath("name").textValue());
+      Integer quantity = json.findPath("quantity").intValue();
+      Cart specifiedCart = new Cart(cartNumber);
+      ObjectNode resultData = Json.newObject();
+      resultData.put("cartNumber",specifiedCart.getCartNumber());
+      resultData.put("productName",specifiedProduct.getName());
+      resultData.put("quantity",quantity);
+      Status result;
+      if (CartService.addProductToBasket(specifiedCart, specifiedProduct, quantity)){
+        resultData.put("success", Boolean.TRUE);
+        result = ok(resultData);
+      } else {
+        resultData.put("success", Boolean.FALSE);
+        result = internalServerError(resultData);
+      }
+      return result;
     }
   }
 

@@ -21,4 +21,4 @@ GET        /preview                                       controllers.Prismic.pr
 GET        /assets/*file                                  controllers.Assets.at(path="/public", file)
 GET        /webjars/*file                                 controllers.WebJarAssets.at(file)
 
-POST        /patate                                       controllers.Application.createPatate()
+POST       /carts/*cartNumber/products                    controllers.Application.addProductToCart(cartNumber: Integer)
