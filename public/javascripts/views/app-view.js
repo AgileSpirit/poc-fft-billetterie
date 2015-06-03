@@ -13,7 +13,7 @@ var app = app || {};
     },
 
     render: function () {
-      this.$el.html('Hello world !');
+      //this.$el.html('Hello world !');
     }
   });
 

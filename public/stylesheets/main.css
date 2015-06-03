@@ -41,14 +41,19 @@ a {
 
 #app-body {
     margin-top: 90px;
-    background-color: #EFEFEF;
+    background-color: #FFF;
     padding: 20px 0;
+    margin-bottom: 180px;
 }
 
 #app-footer {
     background-color: #00503C;
     color: #80A89E;
     font-size: 12px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
 }
 
 /**/
@@ -108,4 +113,16 @@ a {
     float: left;
     width: 62%;
     padding-left: 10px;
+}
+
+/* -------------- */
+/* TUNNEL D'ACHAT */
+/* -------------- */
+
+#store {}
+
+#store section.products {}
+
+#store section.cart {
+    background-color: #FEFEFE;
 }

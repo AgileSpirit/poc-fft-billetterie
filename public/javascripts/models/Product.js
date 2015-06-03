@@ -4,12 +4,17 @@ var app = app || {};
   'use strict';
 
   app.models.Product = Backbone.Model.extend({
+
     defaults: {
       name: '',
       description: '',
-      reference: '',
-      type: ''
+      price: ''
+    },
+
+    select: function() {
+      console.log("Le produit " + this.name + " a été sélectionné !");
     }
+
   });
 
 })();

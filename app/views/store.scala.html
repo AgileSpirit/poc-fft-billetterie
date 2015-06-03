@@ -1,10 +1,22 @@
 @main("All documents") {
 
-    <div class="panel panel-default">
-        <div class="panel-body">
-            <div id="store">
-                titi toto
-            </div>
+    <div class="container">
+        <div id="store" class="row">
+            <section class="products col-md-8">
+                <h1>Produits</h1>
+                <ul class="product-list">
+                    <li class="product-item">
+                        <div class="product">
+                            <p class="title">{{product.title}}</p>
+                            <p class="description">{{product.description}}</p>
+                            <p class="price">{{product.price}}</p>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+            <section class="cart col-md-4">
+                <h1>Panier</h1>
+            </section>
         </div>
     </div>
 
