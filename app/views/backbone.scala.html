@@ -8,6 +8,7 @@
             <!-- CSS resources -->
         <link rel='stylesheet' href='@routes.WebJarAssets.at(WebJarAssets.locate("css/bootstrap.min.css"))'>
         <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/main.css")">
+        <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/store.css")">
         <link rel="shortcut icon" href="@routes.Assets.at("images/favicon.ico")">
             <!-- JS resources commonly required -->
         <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("jquery.min.js"))'></script>
@@ -32,25 +33,45 @@
 
         </div>
 
+            <!-- ============== -->
+            <!-- HTML TEMPLATES -->
+            <!-- ============== -->
+
         <script type="text/template" id="product-item">
-            <div class="product">
-                <p class="name"><%= name %></p>
-                <p class="description"><%= description %></p>
-                <p class="price"><%= price %></p>
+            <div class="product-wrapper">
+                <div class="product">
+                    <p class="name"><%= name %></p>
+                    <p class="description"><%= description %></p>
+                    <p class="price"><%= price %></p>
+                </div>
+                <p>
+                    <button type="button" class="btn btn-primary btn-block">Ajouter au panier</button>
+                </p>
             </div>
         </script>
 
-        <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))'></script>
+            <!-- ============ -->
+            <!-- JS RESOURCES -->
+            <!-- ============ -->
 
             <!-- Vendor libs -->
+        <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("bootstrap.min.js"))'></script>
         <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("underscore-min.js"))'></script>
         <script type='text/javascript' src='@routes.WebJarAssets.at(WebJarAssets.locate("backbone-min.js"))'></script>
 
+            <!-- Models -->
+        <script src="@routes.Assets.at("javascripts/models/Product.js")"></script>
+            <!-- Collections -->
+        <script src="@routes.Assets.at("javascripts/collections/ProductCollection.js")"></script>
+            <!-- Routers -->
+        <script src="@routes.Assets.at("javascripts/routers/Router.js")"></script>
+            <!-- Views -->
+        <script src="@routes.Assets.at("javascripts/views/ProductView.js")"></script>
+        <script src="@routes.Assets.at("javascripts/views/ProductCollectionView.js")"></script>
+        <script src="@routes.Assets.at("javascripts/views/StoreView.js")"></script>
             <!-- App -->
-        <script src="@routes.Assets.at("javascripts/models.js")"></script>
-        <script src="@routes.Assets.at("javascripts/views.js")"></script>
-        <script src="@routes.Assets.at("javascripts/router.js")"></script>
         <script src="@routes.Assets.at("javascripts/app.js")"></script>
+
     </body>
 </html>
 
