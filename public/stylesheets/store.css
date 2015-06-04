@@ -17,12 +17,18 @@
     height: 100px;
 }
 
+#app-body .container {
+    width: 1024px;
+}
+
 .row.products,
 .row.cart {
     border-radius: 2px;
     background-color: #FFF;
     box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 0 0.5em rgba(0,0,0,0.3);
     margin: 0 -10px;
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 .product-list {
@@ -32,7 +38,7 @@
 }
 
 .product-item {
-    padding: 15px;
+    padding: 5px;
 }
 
 .product-wrapper {
