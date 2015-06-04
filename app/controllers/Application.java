@@ -2,22 +2,17 @@ package controllers;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
-import com.oracle.jrockit.jfr.Producer;
 import domain.Cart;
 import domain.Product;
-import org.slf4j.Logger;
-import play.*;
 import play.libs.Json;
 import play.mvc.*;
 
 import java.util.*;
 
 import services.CartService;
-import views.html.*;
 
 import io.prismic.*;
 import static controllers.Prismic.*;
-import static org.slf4j.LoggerFactory.getLogger;
 
 public class Application extends Controller {
 
@@ -91,6 +86,10 @@ public class Application extends Controller {
   // -- Resolve links to documents
   public static LinkResolver linkResolver(Api api, Http.Request request) {
     return new LinkResolver(api, request);
+  }
+
+  public static Result backbone() {
+    return ok(views.html.backbone.render());
   }
 
   public static class LinkResolver extends SimpleLinkResolver {

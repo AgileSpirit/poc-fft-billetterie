@@ -1,0 +1,17 @@
+[{
+  "name": "Tournoi",
+  "description": "L’offre classique de billetterie pour le tournoi : l'intensité des matchs, sur le court de votre choix",
+  "price": "A partir de 85€"
+}, {
+  "name": "Qualif",
+  "description": "L’accès au prélude du tournoi, pour encourager les espoirs du tennis mondial",
+  "price": "A partir de 125€"
+}, {
+  "name": "Visiteurs du Soir",
+  "description": "Venez découvrir l’ambiance unique de Roland-Garros en soirée",
+  "price": "A partir de 250€"
+}, {
+  "name": "Trophée des Légendes Perrier",
+  "description": "Redécouvrez les légendes vivantes du tennis",
+  "price": "A partir de 175€"
+}]

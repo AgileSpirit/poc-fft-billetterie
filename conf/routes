@@ -7,6 +7,7 @@ GET        /                                              controllers.Applicatio
 
 # Store (Backbone/React SPA)
 GET        /store                                         controllers.Application.store()
+GET        /backbone                                      controllers.Application.backbone()
 
 # Document detail
 GET        /documents/$id<[-_a-zA-Z0-9]{16}>/:slug        controllers.Application.detail(id, slug)
