@@ -1,3 +1,30 @@
+.background {
+    z-index: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover;
+    background: url("/assets/images/bg-store.jpg") 50% 50%;;
+}
+
+#header-logo {
+    left: 70px;
+    position: absolute;
+    z-index: 3;
+    width: 100px;
+    height: 100px;
+}
+
+.row.products,
+.row.cart {
+    border-radius: 2px;
+    background-color: #FFF;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.2), 0 0 0.5em rgba(0,0,0,0.3);
+    margin: 0 -10px;
+}
+
 .product-list {
     list-style-type: none;
     padding: 0;
@@ -10,8 +37,10 @@
 
 .product-wrapper {
     padding: 15px;
-    border: 1px solid #CCC;
-    border-radius: 5px;
+    padding-bottom: 5px;
+    border: 1px solid #999;
+    border-radius: 2px;
+    box-shadow: 0 1px 1px 0 #CCC;
 }
 
 .product {

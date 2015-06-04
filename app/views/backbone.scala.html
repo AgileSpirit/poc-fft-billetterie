@@ -15,18 +15,34 @@
     </head>
 
     <body>
+        <div class="background"></div>
         <div id="app-wrapper">
+            <header id="app-header" class="navbar navbar-default navbar-fixed-top">
+                <div class="container">
+                    <a id="header-brand" href="@routes.Application.index()">
+                        <img id="header-logo" src="@routes.Assets.at("images/rg-logo-header.png")" alt="Logo Roland Garros">
+                    </a>
+                </div>
+            </header>
             <div id="app-body">
                 <div class="container">
                     <div id="store" class="row">
-                        <section class="products col-md-8">
-                            <h1>Produits</h1>
-                            <ul id="product-list" class="product-list">
-                            </ul>
-                        </section>
-                        <section class="cart col-md-4">
-                            <h1>Panier</h1>
-                        </section>
+                        <div class="col-md-8">
+                            <section class="row products">
+                                <div class="col-md-12">
+                                    <h1>Produits</h1>
+                                </div>
+                                <ul id="product-list" class="product-list">
+                                </ul>
+                            </section>
+                        </div>
+                        <div class="col-md-4">
+                            <section class="row cart">
+                                <div class="col-md-12">
+                                    <h1>Panier</h1>
+                                </div>
+                            </section>
+                        </div>
                     </div>
                 </div>
             </div>
