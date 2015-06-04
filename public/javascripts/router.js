@@ -1,11 +1,18 @@
 var app = app || {};
 
-app.Router = Backbone.Router.extend({
+(function () {
 
-  routes: {
-  }
+  'use strict';
 
-});
+  app.Router = Backbone.Router.extend({
 
-new app.Router();
-Backbone.history.start();
+    routes: {
+    }
+
+  });
+
+  new app.Router();
+  Backbone.history.start();
+
+})();
+

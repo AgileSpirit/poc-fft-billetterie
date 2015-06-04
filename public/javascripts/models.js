@@ -1,8 +1,12 @@
 var app = app || {};
 
+(function () {
+
+  'use strict';
+
 // Product Model
 // =============
-app.Product = Backbone.Model.extend({
+  app.Product = Backbone.Model.extend({
 
     defaults: {
       name: null,
@@ -10,14 +14,16 @@ app.Product = Backbone.Model.extend({
       price: null
     }
 
-});
+  });
 
 // Product Collection
 // ==================
-app.ProductCollection = Backbone.Collection.extend({
+  app.ProductCollection = Backbone.Collection.extend({
 
-  model: app.Product,
-  url: '/assets/products.json'
-});
+    model: app.Product,
+    url: '/assets/products.json'
+  });
 
+
+})();
 
