@@ -8,13 +8,8 @@ var app = app || {};
 
     el: '#store',
 
-    initialize: function () {
-//      var productCollection = new app.ProductCollection();
-      this.productCollectionView = new app.ProductCollectionView();
-//      this.productCollectionView = new app.ProductCollectionView({model: productCollection});
-//      productCollection.fetch();
-
-      this.render();
+    initialize: function (productCollectionView) {
+        this.productCollectionView = productCollectionView;
     },
 
     render: function () {

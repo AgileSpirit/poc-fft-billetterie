@@ -7,7 +7,11 @@ var app = app || {};
   app.ProductCollection = Backbone.Collection.extend({
 
     model: app.Product,
-    url: '/assets/products.json'
+    url: '/assets/products.json',
+
+    initialize: function () {
+      console.log("initialise la collection de products");
+    }
   });
 
 

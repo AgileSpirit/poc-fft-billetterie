@@ -7,12 +7,12 @@ var app = app || {};
   app.Router = Backbone.Router.extend({
 
     routes: {
+      '': function () {
+        app.productCollection.fetch({reset:true});
+      }
     }
 
   });
-
-  new app.Router();
-  Backbone.history.start();
 
 })();
 

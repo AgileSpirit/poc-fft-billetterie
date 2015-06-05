@@ -13,6 +13,7 @@ var app = app || {};
     template: _.template($('#product-item').html()),
 
     initialize: function () {
+        console.log("product view sir");
       this.listenTo(this.model, "change", this.render);
     },
 

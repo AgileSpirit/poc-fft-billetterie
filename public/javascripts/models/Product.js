@@ -10,6 +10,10 @@ var app = app || {};
       name: null,
       description: null,
       price: null
+    },
+
+    initialize: function () {
+      console.log("initialise le product");
     }
 
   });
